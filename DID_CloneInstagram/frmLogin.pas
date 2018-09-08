@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.TabControl,
-  System.Actions, FMX.ActnList;
+  System.Actions, FMX.ActnList, FMX.Edit;
 
 type
   TForm2 = class(TForm)
@@ -49,8 +49,40 @@ type
     lyt8: TLayout;
     rctngl1: TRectangle;
     Label5: TLabel;
+    Line3: TLine;
+    edtFone: TEdit;
+    lyt9: TLayout;
+    lyt10: TLayout;
+    rctngl2: TRectangle;
+    btnAvancar2: TSpeedButton;
+    lyt11: TLayout;
+    lyt12: TLayout;
+    lbl5: TLabel;
+    lbl6: TLabel;
     ln4: TLine;
+    ln5: TLine;
+    lyt13: TLayout;
+    rctngl3: TRectangle;
+    edtEmail: TEdit;
+    lyt14: TLayout;
+    lyt15: TLayout;
+    rctngl4: TRectangle;
+    btnAvancar3: TSpeedButton;
+    lbl4: TLabel;
+    CADASTRO5: TTabItem;
+    actTabCadastro5: TChangeTabAction;
+    lyt16: TLayout;
+    crcl1: TCircle;
+    lbl7: TLabel;
+    lyt17: TLayout;
+    lyt18: TLayout;
+    rctngl5: TRectangle;
+    btn2: TSpeedButton;
     procedure Label3Click(Sender: TObject);
+    procedure btnAvancar2Click(Sender: TObject);
+    procedure btnAvancar3Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +95,27 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TForm2.btn2Click(Sender: TObject);
+begin
+    actTabCadastro4.ExecuteTarget(Sender);
+end;
+
+procedure TForm2.btnAvancar2Click(Sender: TObject);
+begin
+  actTabCadastro3.ExecuteTarget(Sender);
+end;
+
+procedure TForm2.btnAvancar3Click(Sender: TObject);
+begin
+  actTabCadastro5.ExecuteTarget(Sender);
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  tbc1.TabPosition := TTabPosition.None;
+  tbc1.ActiveTab := CADASTRO1;
+end;
 
 procedure TForm2.Label3Click(Sender: TObject);
 begin
