@@ -78,6 +78,7 @@ type
     lyt18: TLayout;
     rctngl5: TRectangle;
     btn2: TSpeedButton;
+    StyleBook1: TStyleBook;
     procedure Label3Click(Sender: TObject);
     procedure btnAvancar2Click(Sender: TObject);
     procedure btnAvancar3Click(Sender: TObject);
@@ -95,6 +96,7 @@ var
 implementation
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TForm2.btn2Click(Sender: TObject);
 begin

@@ -43,6 +43,7 @@ uses
   frmLogin;
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TForm1.Label3Click(Sender: TObject);
 begin
